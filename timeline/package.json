@@ -1,0 +1,32 @@
+{
+  "name": "ivy-timeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "browser": "dist/index.js",
+  "unpkg": "dist/index.js",
+  "scripts": {
+    "dev": "rollup -c rollup.config.mjs --watch",
+    "build": "rollup -c rollup.config.mjs"
+  },
+  "keywords": [
+    "Timeline",
+    "vue",
+    "component",
+    "front-end",
+    "时间轴"
+  ],
+  "files": [
+    "dist",
+    "../README.md"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.3",
+    "rollup": "^3.28.0",
+    "rollup-plugin-scss": "^4.0.0",
+    "sass": "^1.65.1"
+  }
+}
