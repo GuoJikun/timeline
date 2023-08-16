@@ -14,10 +14,19 @@
     position: relative;
     display: inline-flex;
     flex: 0 0 auto;
+    &:last-child .ivy-timeline-line {
+      display: none;
+    }
+    &__left {
+      line-height: 1em;
+    }
     &__icon {
       position: relative;
       z-index: 1;
       background-color: #fff;
+      display: inline-flex;
+      line-height: 1em;
+      box-sizing: border-box;
     }
     &-icon {
       display: block;
@@ -36,6 +45,7 @@
   &-line {
     background-color: #e5e5e5;
     position: absolute;
+    z-index: 0;
   }
 }
 
@@ -49,11 +59,17 @@
     }
     &-item {
       padding-bottom: var(--ivy-timeline-space);
+
       &__left {
         margin-right: 24px;
       }
       &-icon {
-        margin: 0 auto;
+        // margin: 0 auto;
+      }
+      &-timestamp {
+        margin-bottom: 8px;
+        font-size: 12px;
+        color: #999;
       }
     }
   }
@@ -62,18 +78,19 @@
 .ivy-timeline-horizontal {
   .ivy-timeline {
     &-line {
-      top: 0;
+      left: 0;
       width: 100%;
       top: calc(var(--ivy-timeline-dot-size) / 2);
       height: 1px;
     }
     &-item {
       padding-right: var (--ivy-timeline-space);
+      flex-direction: column;
       &__left {
         margin-bottom: 24px;
       }
       &-icon {
-        margin: 0 auto;
+        // margin: 0 auto;
       }
     }
   }

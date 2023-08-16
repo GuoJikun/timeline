@@ -15,10 +15,19 @@
   display: inline-flex;
   flex: 0 0 auto;
 }
+.ivy-timeline-item:last-child .ivy-timeline-line {
+  display: none;
+}
+.ivy-timeline-item__left {
+  line-height: 1em;
+}
 .ivy-timeline-item__icon {
   position: relative;
   z-index: 1;
   background-color: #fff;
+  display: inline-flex;
+  line-height: 1em;
+  box-sizing: border-box;
 }
 .ivy-timeline-item-icon {
   display: block;
@@ -35,6 +44,7 @@
 .ivy-timeline-line {
   background-color: #e5e5e5;
   position: absolute;
+  z-index: 0;
 }
 
 .ivy-timeline-vertical .ivy-timeline-line {
@@ -49,22 +59,22 @@
 .ivy-timeline-vertical .ivy-timeline-item__left {
   margin-right: 24px;
 }
-.ivy-timeline-vertical .ivy-timeline-item-icon {
-  margin: 0 auto;
+.ivy-timeline-vertical .ivy-timeline-item-timestamp {
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #999;
 }
 
 .ivy-timeline-horizontal .ivy-timeline-line {
-  top: 0;
+  left: 0;
   width: 100%;
   top: calc(var(--ivy-timeline-dot-size) / 2);
   height: 1px;
 }
 .ivy-timeline-horizontal .ivy-timeline-item {
   padding-right: var --ivy-timeline-space;
+  flex-direction: column;
 }
 .ivy-timeline-horizontal .ivy-timeline-item__left {
   margin-bottom: 24px;
-}
-.ivy-timeline-horizontal .ivy-timeline-item-icon {
-  margin: 0 auto;
 }

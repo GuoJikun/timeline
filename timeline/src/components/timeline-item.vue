@@ -5,6 +5,8 @@ defineOptions({
 
 const props = defineProps({
   hollow: Boolean,
+  hideTimestamp: Boolean,
+  timestamp: String,
 });
 </script>
 
@@ -22,7 +24,12 @@ const props = defineProps({
       <div class="ivy-timeline-line"></div>
     </div>
     <div>
-      <slot />
+      <div class="ivy-timeline-item-timestamp" v-if="!props.hideTimestamp">
+        {{ props.timestamp }}
+      </div>
+      <div>
+        <slot />
+      </div>
     </div>
   </div>
 </template>
